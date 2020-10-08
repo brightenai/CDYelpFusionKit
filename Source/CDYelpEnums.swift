@@ -47,7 +47,7 @@ public enum CDYelpAttributeFilter: String {
 /// A list of the business categories the Yelp Fusion API supports.
 ///
 // swiftlint:disable type_body_length
-public enum CDYelpCategoryAlias: String {
+public enum CDYelpCategoryAlias: String, CaseIterable {
     // Active Life
     case activeLife                 = "active"
     case atvRentalsAndTours         = "atvrentals"

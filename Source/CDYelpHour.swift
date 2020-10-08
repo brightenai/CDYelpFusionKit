@@ -27,7 +27,7 @@
 
 import ObjectMapper
 
-public class CDYelpHour: Mappable {
+public class CDYelpHour: Mappable,Codable {
 
     public var hoursType: String?
     public var open: [CDYelpOpen]?

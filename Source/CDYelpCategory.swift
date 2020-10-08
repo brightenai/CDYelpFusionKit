@@ -27,7 +27,7 @@
 
 import ObjectMapper
 
-public class CDYelpCategory: Mappable {
+public class CDYelpCategory: Mappable,Codable {
 
     public var alias: String?
     public var title: String?

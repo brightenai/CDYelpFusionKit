@@ -28,7 +28,7 @@
 import ObjectMapper
 import Foundation
 
-public class CDYelpBusiness: Mappable {
+public class CDYelpBusiness: Mappable,CustomDebugStringConvertible, Hashable, Codable  {
 
     public var id: String?
     public var name: String?
@@ -48,8 +48,20 @@ public class CDYelpBusiness: Mappable {
     public var location: CDYelpLocation?
     public var transactions: [String]?
 
+    public init() {
+    }
+
     public required init?(map: Map) {
     }
+
+    public static func == (lhs: CDYelpBusiness, rhs: CDYelpBusiness) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
 
     public func mapping(map: Map) {
         id              <- map["id"]
@@ -69,5 +81,10 @@ public class CDYelpBusiness: Mappable {
         coordinates     <- map["coordinates"]
         location        <- map["location"]
         transactions    <- map["transactions"]
+    }
+    
+    public var debugDescription: String
+    {
+        return "\(name!) rating:\(String(describing: rating)) - \(categories!)"
     }
 }

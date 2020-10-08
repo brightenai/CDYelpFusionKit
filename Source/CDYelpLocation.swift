@@ -27,7 +27,7 @@
 
 import ObjectMapper
 
-public class CDYelpLocation: Mappable {
+public class CDYelpLocation: Mappable,Codable {
 
     public var addressOne: String?
     public var addressTwo: String?

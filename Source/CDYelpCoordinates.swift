@@ -27,7 +27,7 @@
 
 import ObjectMapper
 
-public class CDYelpCoordinates: Mappable {
+public class CDYelpCoordinates: Mappable,Codable {
 
     public var latitude: Double?
     public var longitude: Double?

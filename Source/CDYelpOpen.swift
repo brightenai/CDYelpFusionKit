@@ -27,7 +27,7 @@
 
 import ObjectMapper
 
-public class CDYelpOpen: Mappable {
+public class CDYelpOpen: Mappable,Codable {
 
     public var isOvernight: Bool?
     public var end: String?
