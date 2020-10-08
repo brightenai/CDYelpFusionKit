@@ -26,6 +26,7 @@
 //
 
 import ObjectMapper
+import Foundation
 
 public class CDYelpEvent: Mappable {
 

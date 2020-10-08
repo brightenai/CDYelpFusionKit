@@ -26,6 +26,7 @@
 //
 
 import Alamofire
+import Foundation
 
 public class CDYelpAPIClient: NSObject {
 

@@ -26,6 +26,7 @@
 //
 
 import Alamofire
+import Foundation
 
 enum CDYelpRouter: URLRequestConvertible {
 

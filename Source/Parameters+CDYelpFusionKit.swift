@@ -26,6 +26,7 @@
 //
 
 import Alamofire
+import Foundation
 
 extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
 

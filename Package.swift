@@ -41,13 +41,46 @@ let package = Package(
             targets: ["CDYelpFusionKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", "5.2.2")
-        .package(url: "https://github.com/tristanhimmelman/ObjectMapper", "4.2.0")
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from:"5.2.2")),
+        .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", .upToNextMajor(from:"4.2.0"))
     ],
     targets: [
         .target(
             name: "CDYelpFusionKit",
-            path: "CDYelpFusionKit")
-    ],
-    swiftLanguageVersions: [.v5])
-)
+            dependencies:["Alamofire", "ObjectMapper"],
+            path: "Source"
+        )
+    ]
+    //swiftLanguageVersions: [.v5]
+    )
+//)
+
+//// swift-tools-version:5.3
+//// The swift-tools-version declares the minimum version of Swift required to build this package.
+//
+//import PackageDescription
+//
+//let package = Package(
+//    name: "YelpImporter",
+//    products: [
+//        // Products define the executables and libraries a package produces, and make them visible to other packages.
+//        .library(
+//            name: "YelpImporter",
+//            targets: ["YelpImporter"]),
+//    ],
+//    dependencies: [
+//        .package(url: "https://github.com/brightenai/MessageBus.git", .branch("master")),
+//        .package(url: "https://github.com/brightenai/Brighten.git", .branch("master")),
+//        .package(url: "https://github.com/brightenai/CDYelpFusionKit.git", .branch("master")),
+//    ],
+//    targets: [
+//        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+//        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+//        .target(
+//            name: "YelpImporter",
+//            dependencies: ["MessageBus","Brighten"]),
+//        .testTarget(
+//            name: "YelpImporterTests",
+//            dependencies: ["YelpImporter"]),
+//    ]
+//)
